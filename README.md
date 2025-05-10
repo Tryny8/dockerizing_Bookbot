@@ -1,3 +1,8 @@
+# Création du projet
+
+## Création du fichier dockerfile pour python
+
+```Dockerfile
 # Build from a slim Debian/Linux image
 FROM debian:stable-slim
 
@@ -23,3 +28,13 @@ COPY books/ books/
 
 # Run our Python script
 CMD ["python3.10", "main.py"]
+```
+
+## Reconstruire l'image
+```sh
+docker build -t bookbot .
+```
+## Exécuter l'image
+```sh
+docker run bookbot
+```
